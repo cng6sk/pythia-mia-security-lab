@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Models & Data (太大了不要提交)
+models/
+data/raw/
+data/processed/
+
+# Results (生成的结果文件)
+results/scores/
+results/metrics/
+results/plots/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# 但保留目录结构
+!models/.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!results/scores/.gitkeep
+!results/metrics/.gitkeep
+!results/plots/.gitkeep
+/results/
+/models/
+/.cursor/
