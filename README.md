@@ -9,31 +9,24 @@
 
 ```
 final/
-├── data/                          # 数据集
-│   ├── raw/                      # 原始数据
-│   └── processed/                # 处理后的数据
-│       ├── member_train.jsonl    # 成员训练集
-│       ├── nonmember.jsonl       # 非成员集
-│       └── split_indices.json    # 划分索引
-├── models/                        # 微调模型
-│   ├── cache/                    # 模型缓存
-│   ├── pythia-70m-full/          # Full FT 模型
-│   ├── pythia-70m-lora/          # LoRA FT 模型
-│   └── pythia-70m-head/          # Head FT 模型
+├── config/                        # 实验配置模块
+│   └── config.py
+├── data/                          # 数据目录
+│   ├── raw/
+│   └── processed/
+├── models/                        # 微调模型与缓存（默认忽略版本控制）
 ├── results/                       # 实验结果
-│   ├── scores/                   # 攻击得分
-│   ├── metrics/                  # 评估指标
-│   └── plots/                    # 可视化图表
-├── scripts/                       # 主要脚本
-│   ├── data_preparation.py       # 数据准备
-│   ├── train.py                  # 模型微调
-│   ├── attack.py                 # MIA 攻击
-│   └── evaluate.py               # 结果评估
-├── config/                        # 配置文件
-│   └── config.py                 # 实验配置
-├── notebooks/                     # Jupyter notebooks
+│   ├── tables/
+│   ├── metrics/
+│   ├── plots/
+│   └── scores/
+├── scripts/                       # 单次实验脚本
+│   ├── data_preparation.py
+│   ├── train.py
+│   ├── attack.py
+│   └── evaluate.py
+├── scripts_pack/                  # 批处理与绘图脚本
 ├── requirements.txt               # Python 依赖
-├── 研究规格说明.md                 # 研究规格文档
 └── README.md                      # 本文件
 ```
 
